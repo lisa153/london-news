@@ -5,24 +5,19 @@
  * Contains custom_descriptions.module
  */
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_FORM_ID_form_alter().
  * @param $form
- * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param FormStateInterface $form_state
+ * @param $form_id
  */
-function custom_descriptions_form_node_article_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $current_user_roles = \Drupal::currentUser()->getRoles();
-  if (in_array('editor', $current_user_roles)) {
-    $form['title']['widget'][0]['value']['#description'] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+function custom_descriptions_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'node_article_form' || $form_id === 'node_article_edit_form') {
+    $current_user_roles = \Drupal::currentUser()->getRoles();
+    if (in_array('editor', $current_user_roles)) {
+      $form['title']['widget'][0]['value']['#description'] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+    }
   }
 }
-
-///**
-// * Implements hook_form_alter().
-// * @param $form
-// * @param \Drupal\Core\Form\FormStateInterface $form_state
-// */
-//function custom_descriptions_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-////  $form['field_postcode']['#description'] = 'FUCK';
-//  dpm($form);
-//}

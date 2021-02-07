@@ -1,0 +1,22 @@
+uuid: be6882ea-028a-4377-a65f-81fad59c05f5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - london_news
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: london_news_local_tasks
+theme: london_news
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

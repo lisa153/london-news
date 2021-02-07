@@ -1,0 +1,50 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+.ln-header {
+  border-bottom: $colour-header 10px solid;
+  height: 70px;
+  padding: 0;
+  @include breakpoint(tablet) {
+    height: 80px;
+  }
+
+  .ln-container {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  a.ln-site-branding {
+    @include font-size($font-site-branding);
+    color: $colour-font-secondary;
+    text-decoration: none;
+    margin: 19px 0;
+
+    &:hover,
+    &:focus {
+      color: $colour-primary;
+    }
+  }
+
+  nav {
+    margin: 0;
+    list-style: none;
+    padding: 5px 0;
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      margin-left: 10px;
+      @include breakpoint(tablet) {
+        margin-left: 40px;
+      }
+    }
+  }
+}

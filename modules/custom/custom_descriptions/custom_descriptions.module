@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_descriptions.module
+ */
+
+/**
+ * Implements hook_FORM_ID_form_alter().
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function custom_descriptions_form_node_article_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $current_user_roles = \Drupal::currentUser()->getRoles();
+  if (in_array('editor', $current_user_roles)) {
+    $form['title']['widget'][0]['value']['#description'] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+  }
+}
+
+///**
+// * Implements hook_form_alter().
+// * @param $form
+// * @param \Drupal\Core\Form\FormStateInterface $form_state
+// */
+//function custom_descriptions_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+////  $form['field_postcode']['#description'] = 'FUCK';
+//  dpm($form);
+//}

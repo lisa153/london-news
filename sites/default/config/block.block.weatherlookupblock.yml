@@ -1,0 +1,26 @@
+uuid: 2d2f36eb-fc27-4e20-adeb-e3fca8702981
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - weather
+  theme:
+    - london_news
+id: weatherlookupblock
+theme: london_news
+region: content
+weight: -1
+provider: null
+plugin: weather_lookup_block
+settings:
+  id: weather_lookup_block
+  label: 'Weather lookup block'
+  provider: weather
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /weather
+    negate: false
+    context_mapping: {  }

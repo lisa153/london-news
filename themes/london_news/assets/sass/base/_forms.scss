@@ -1,0 +1,51 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+form.views-exposed-form,
+form .ln-weather-form {
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+
+  label {
+    display: block;
+  }
+
+  .form-text {
+    padding: 10px 20px;
+    border: 1px $colour-input-border solid;
+
+    &:hover,
+    &:focus {
+      border: 1px $colour-input-focus solid;
+    }
+
+    @include breakpoint(mobile) {
+      width: calc(100% - 40px);
+    }
+  }
+
+  .form-actions {
+    align-self: flex-end;
+  }
+
+  input.form-submit {
+    @extend %button;
+    margin-top: 15px;
+    @include breakpoint(tablet) {
+      margin: 0 0 0 5px;
+    }
+  }
+}
+
+.ln-weather-form input.form-submit {
+  height: 50px;
+  align-self: flex-end;
+}
+
+.ln-messages {
+  color: $colour-primary;
+  margin: 20px 0;
+  font-weight: bold;
+}

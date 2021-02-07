@@ -1,0 +1,22 @@
+@import '../abstracts/colours';
+@import '../abstracts/mixins';
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+footer {
+  background-color: $colour-footer;
+  height: 55px;
+
+  .ln-container {
+    p,
+    a {
+      padding-top: 15px;
+      color: $colour-footer-text;
+    }
+    a:hover,
+    a:focus {
+      color: $colour-footer-text-hover;
+    }
+  }
+}

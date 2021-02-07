@@ -1,0 +1,28 @@
+uuid: 99a93e24-c203-415f-9f71-db06611a88b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - weather
+  theme:
+    - london_news
+id: weatherblock
+theme: london_news
+region: content
+weight: 1
+provider: null
+plugin: weather_block
+settings:
+  id: weather_block
+  label: 'Weather block'
+  provider: weather
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

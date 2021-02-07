@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+a.ln-call-to-action{
+  padding: 30px 50px;
+  border: 1px solid $colour-cta-background;
+  background-color: $colour-cta-background;
+  color: $colour-cta-text;
+  width: calc(100% - 100px);
+  text-align: center;
+  display: block;
+  margin: 20px 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $colour-cta-border-hover;
+    background-color: $colour-cta-background-hover;
+    color: $colour-cta-text-hover;
+    cursor: pointer;
+  }
+
+  @include breakpoint(tablet) {
+    width: fit-content;
+    width: -moz-fit-content;
+    text-align: left;
+  }
+}

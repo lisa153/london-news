@@ -1,0 +1,59 @@
+@import "colours";
+@import "mixins";
+
+// Fonts
+$font-regular: 'Trebuchet MS', sans-serif;
+$bold: 700;
+
+// Responsive font sizes
+
+$font-h1: (
+  // Mobile
+  null: $bold 30px/38px $font-regular,
+  // Tablet +
+  680px: $bold 38px/48px $font-regular,
+);
+
+$font-h2: (
+  // Mobile
+  null: $bold 20px/24px $font-regular,
+  // Tablet +
+  680px: $bold 24px/28px $font-regular,
+);
+
+$font-site-branding: (
+  // Mobile
+  null: $bold 24px/30px $font-regular,
+  // Tablet +
+  680px: $bold 34px/40px $font-regular,
+);
+
+$font-body: (
+  // Mobile
+  null: 16px/26px $font-regular,
+  // Tablet
+  680px: 18px/28px $font-regular,
+);
+
+%button {
+  padding: 10px 20px;
+  border: 1px solid $colour-button-background;
+  background-color: $colour-button-background;
+  color: $colour-button-text;
+  width: calc(100% - 40px);
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $colour-button-border-hover;
+    background-color: $colour-button-background-hover;
+    color: $colour-button-text-hover;
+    cursor: pointer;
+  }
+
+  @include breakpoint(tablet) {
+    width: fit-content;
+    width: -moz-fit-content;
+    text-align: left;
+  }
+}

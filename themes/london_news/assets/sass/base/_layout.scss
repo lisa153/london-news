@@ -1,0 +1,30 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: $font-regular;
+  min-height: 100%;
+}
+
+main {
+  min-height: calc(100vh - 171px);
+  @include breakpoint(tablet) {
+    min-height: calc(100vh - 188px);
+  }
+}
+
+.ln-container {
+  margin: 0 auto;
+  padding: 0 15px;
+  @include breakpoint(desktop) {
+    width: 1170px;
+    padding: 0;
+  }
+}

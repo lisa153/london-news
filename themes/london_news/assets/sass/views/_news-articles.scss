@@ -1,0 +1,15 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+.ln-news-view {
+  .ln-date {
+    color: $colour-font-secondary;
+  }
+
+  .ln-filter {
+    border: none;
+    margin: 25px 0 40px 0;
+    padding: 0;
+  }
+}

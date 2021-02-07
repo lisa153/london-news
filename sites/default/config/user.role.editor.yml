@@ -1,0 +1,27 @@
+uuid: 432aef9d-1fb0-46e3-aea2-c73090e69cdd
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'access user profiles'
+  - 'administer menu'
+  - 'change own username'
+  - 'create article content'
+  - 'delete all revisions'
+  - 'delete any article content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

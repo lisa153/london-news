@@ -1,0 +1,5 @@
+name: Custom descriptions
+type: module
+description: 'Adds custom description for title field'
+package: Custom
+core: 8.x

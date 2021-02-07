@@ -1,0 +1,10 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+a.ln-button {
+  @extend %button;
+  margin: 20px 0;
+  display: block;
+  text-decoration: none;
+}

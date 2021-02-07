@@ -1,0 +1,55 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+.ln-container {
+  h1 {
+    color: $colour-font-primary;
+    @include font-size($font-h1);
+    padding: 10px 0;
+  }
+
+  h2 {
+    color: $colour-font-primary;
+    @include font-size($font-h2);
+
+    a {
+      color: $colour-link;
+      @include font-size($font-h2);
+
+      &:hover,
+      &:focus {
+        color: $colour-link-hover;
+      }
+    }
+  }
+
+  p,
+  li,
+  a,
+  label,
+  input,
+  select,
+  textarea {
+    @include font-size($font-body);
+    color: $colour-font-primary;
+  }
+
+  a {
+    color: $colour-link;
+
+    &:hover,
+    &:focus {
+      color: $colour-link-hover;
+      cursor: pointer;
+    }
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+strong {
+  font-weight: $bold;
+}

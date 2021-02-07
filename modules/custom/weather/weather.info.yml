@@ -1,0 +1,5 @@
+name: Weather
+type: module
+description: 'Find out current weather using a London postcode'
+package: Custom
+core: 8.x

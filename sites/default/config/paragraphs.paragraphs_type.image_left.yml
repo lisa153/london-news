@@ -1,0 +1,10 @@
+uuid: 5bf77c4e-c346-4832-9913-562493195c62
+langcode: en
+status: true
+dependencies: {  }
+id: image_left
+label: 'Image left'
+icon_uuid: null
+icon_default: null
+description: 'Show an image to the left of a body of text.'
+behavior_plugins: {  }

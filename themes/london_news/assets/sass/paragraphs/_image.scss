@@ -1,0 +1,42 @@
+@import "../abstracts/variables";
+@import "../abstracts/colours";
+@import "../abstracts/mixins";
+
+.ln-image {
+  margin-bottom: 40px;
+  min-height: 305px;
+
+  .ln-field-image {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    @include breakpoint(tablet) {
+      width: 33%;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+      @include breakpoint(mobile) {
+        float: none;
+      }
+    }
+
+    .caption {
+      padding: 10px 0;
+    }
+  }
+
+  .ln-field-body {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  &.ln-image-left .ln-field-image{
+    margin: 0 30px 20px 0;
+    float: left;
+  }
+  &.ln-image-right .ln-field-image{
+    float: right;
+    margin: 0 0 20px 20px;
+  }
+}

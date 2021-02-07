@@ -1,0 +1,25 @@
+<div class="ln-news-view">
+  {% if title %}
+    <h1>
+      {{ title }}
+    </h1>
+  {% endif %}
+
+  <fieldset class="ln-filter">
+    {{ exposed }}
+  </fieldset>
+
+  {% if rows -%}
+    {{ rows }}
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+
+  {% if pager %}
+    <div class="ln-pager">
+      {{ pager }}
+    </div>
+  {% endif %}
+
+</div>
+

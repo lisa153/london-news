@@ -1,0 +1,38 @@
+uuid: a9993f5a-8621-4d0a-aaae-5484df81291a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.image_right.field_body
+    - field.field.paragraph.image_right.field_image
+    - field.field.paragraph.image_right.field_image_caption
+    - image.style.150x100_scale_crop
+    - paragraphs.paragraphs_type.image_right
+  module:
+    - image
+    - text
+id: paragraph.image_right.preview
+targetEntityType: paragraph
+bundle: image_right
+mode: preview
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    type: text_trimmed
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: 150x100_scale_crop
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_image_caption: true

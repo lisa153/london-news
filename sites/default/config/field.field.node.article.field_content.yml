@@ -1,0 +1,51 @@
+uuid: 36ef2882-0453-4ac6-b118-707f3e8e8194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+    - paragraphs.paragraphs_type.body
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.call_to_action
+    - paragraphs.paragraphs_type.image_left
+    - paragraphs.paragraphs_type.image_right
+  module:
+    - entity_reference_revisions
+id: node.article.field_content
+field_name: field_content
+entity_type: node
+bundle: article
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      body: body
+      button: button
+      call_to_action: call_to_action
+      image_left: image_left
+      image_right: image_right
+    target_bundles_drag_drop:
+      body:
+        enabled: true
+        weight: 6
+      button:
+        enabled: true
+        weight: 7
+      call_to_action:
+        enabled: true
+        weight: 8
+      image_left:
+        enabled: true
+        weight: 9
+      image_right:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

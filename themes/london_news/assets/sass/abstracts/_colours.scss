@@ -1,0 +1,48 @@
+// Colour variables
+
+$colour-primary: #c71556;
+$colour-secondary: #ffffff;
+
+// ************ Font components ************ \\
+
+// Font colours
+$colour-font-primary: #333;
+$colour-font-secondary: #666;
+
+// Links
+$colour-link: #097ac5;
+$colour-link-hover: #5b26b8;
+
+// ************ General page components  ************ \\
+
+// Header
+$colour-header: $colour-primary;
+
+// Footer
+$colour-footer: $colour-primary;
+$colour-footer-text: $colour-secondary;
+$colour-footer-text-hover: #b3feff;
+
+// ************ Search components ************ \\
+
+// Form fields
+$colour-input-border: $colour-font-primary;
+$colour-input-focus: $colour-primary;
+
+// ************ Paragraph components ************ \\
+
+// Buttons
+$colour-button-background: $colour-primary;
+$colour-button-text: $colour-secondary;
+
+$colour-button-background-hover: $colour-secondary;
+$colour-button-text-hover: $colour-primary;
+$colour-button-border-hover: $colour-primary;
+
+// Call to actions
+$colour-cta-background: $colour-link-hover;
+$colour-cta-text: $colour-secondary;
+
+$colour-cta-background-hover: $colour-secondary;
+$colour-cta-text-hover: $colour-link-hover;
+$colour-cta-border-hover: $colour-link-hover;

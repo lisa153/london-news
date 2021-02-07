@@ -1,0 +1,25 @@
+uuid: 0cfb1918-0eb6-4d91-a357-87a348c4ceac
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:595e96b2-2cac-4a1d-8b9e-8365287260a4'
+  module:
+    - block_content
+  theme:
+    - london_news
+id: footer
+theme: london_news
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:595e96b2-2cac-4a1d-8b9e-8365287260a4'
+settings:
+  id: 'block_content:595e96b2-2cac-4a1d-8b9e-8365287260a4'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

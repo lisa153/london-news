@@ -1,0 +1,35 @@
+// Screen size
+
+// Mobile  =  < 680px
+// Tablet  =  681px <
+
+@mixin breakpoint($device) {
+  @if $device == mobile {
+    @media (max-width: 680px) {
+      @content;
+    }
+  } @else if $device == tablet {
+    @media (min-width: 681px) {
+      @content;
+    }
+  }
+  @else if $device == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint only supports: mobile, tablet, desktop";
+  }
+}
+
+@mixin font-size($font-map) {
+  @each $breakpoint, $font-size in $font-map {
+    @if $breakpoint == null {
+      font: $font-size;
+    } @else {
+      @media (min-width: $breakpoint) {
+        font: $font-size;
+      }
+    }
+  }
+}

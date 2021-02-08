@@ -1,8 +1,8 @@
 # london-news
-London News website with weather api capabilities
+London News website with weather api capabilities: https://dev-london-news.pantheonsite.io/
 
 ## Login details for CMS
-Login details for https://dev-london-news.pantheonsite.io
+Login at https://dev-london-news.pantheonsite.io/user
 
 ### Editor
 Username: editor
